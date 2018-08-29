@@ -8,7 +8,7 @@ import Nest from '../components/Nest.vue'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -25,7 +25,15 @@ export default new Router({
     {
       path: '/about',
       name: 'about',
-      component: About
+      component: About,
+      beforeEnter: (to, from, next) => {
+        console.log('路由独享守卫', to, from, next)
+        next()
+      },
+      // 路由元信息,通过组件内route对象可以获取到
+      meta: {
+        requiresAuth: true
+      }
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -76,6 +84,26 @@ export default new Router({
           }
         }
       ]
+    },
+    // 重定向
+    { path: '/n', redirect: '/nest' },
+    // 通过props解耦
+    {
+      path: '/routerParam/:id',
+      name: 'routerParam',
+      component: () => import('../components/RouterParam.vue'),
+      props: true
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  console.log('全局守卫', to, from, next)
+  next()
+})
+
+router.afterEach((to, from) => {
+  console.log('全局后置守卫', to, from)
+})
+
+export { router }
