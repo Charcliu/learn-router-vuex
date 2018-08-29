@@ -96,7 +96,7 @@ const router = new Router({
     }
   ],
   // 滚动行为
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior (to, from, savedPosition) {
     // return 期望滚动到哪个的位置
     return {
       x: 0,

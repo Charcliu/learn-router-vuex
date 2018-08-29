@@ -7,7 +7,7 @@
 export default {
   name: 'RouterParam',
   props: ['id'],
-  data() {
+  data () {
     return {}
   }
 }

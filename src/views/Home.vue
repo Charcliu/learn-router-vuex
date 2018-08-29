@@ -15,7 +15,7 @@ export default {
   // components: {
   //   HelloWorld
   // },
-  mounted() {
+  mounted () {
     console.log(this.$route)
     console.log(this.$router)
   }

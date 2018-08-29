@@ -7,15 +7,15 @@
 <script>
 export default {
   name: 'User',
-  data() {
+  data () {
     return {}
   },
-  mounted() {
+  mounted () {
     console.log(this.$route)
   },
   //   响应路由参数的变化
   watch: {
-    $route(to, from) {
+    $route (to, from) {
       // 对路由变化作出响应...
       console.log(to)
       console.log(from)
@@ -33,4 +33,3 @@ export default {
 <style lang="sass" scoped>
 
 </style>
-

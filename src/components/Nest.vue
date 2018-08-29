@@ -7,7 +7,7 @@
 <script>
 export default {
   name: 'Nest',
-  data() {
+  data () {
     return {}
   }
 }
@@ -15,4 +15,3 @@ export default {
 <style lang="sass" scoped>
 
 </style>
-

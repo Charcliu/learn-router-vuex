@@ -4,7 +4,7 @@
 <script>
 export default {
   name: 'Footer',
-  data() {
+  data () {
     return {}
   }
 }
@@ -12,5 +12,3 @@ export default {
 <style lang="sass" scoped>
 
 </style>
-
-

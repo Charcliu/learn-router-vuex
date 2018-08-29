@@ -10,7 +10,7 @@
 <script>
 export default {
   name: 'Index',
-  data() {
+  data () {
     return {}
   }
 }
@@ -18,5 +18,3 @@ export default {
 <style lang="sass" scoped>
 
 </style>
-
-

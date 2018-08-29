@@ -6,7 +6,7 @@
 <script>
 export default {
   name: 'PageA',
-  data() {
+  data () {
     return {}
   }
 }

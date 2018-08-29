@@ -28,7 +28,7 @@
 <script>
 export default {
   name: 'App',
-  data() {
+  data () {
     return {}
   },
   methods: {
@@ -40,19 +40,19 @@ export default {
     // router.push({ name: 'user', params: { userId: 123 }})
     // 带查询参数，变成 /register?plan=private
     // router.push({ path: 'register', query: { plan: 'private' }})
-    toUser() {
+    toUser () {
       this.$router.push({ name: 'user', params: { id: 123 } })
     },
-    toNest() {
+    toNest () {
       this.$router.push('/nest/pageA')
     },
-    toHelloWorld() {
+    toHelloWorld () {
       this.$router.push({ path: '/helloWorld', query: { plan: 'private' } })
     },
-    toHome() {
+    toHome () {
       this.$router.replace('/')
     },
-    toGo() {
+    toGo () {
       this.$router.go(2)
     }
   }
