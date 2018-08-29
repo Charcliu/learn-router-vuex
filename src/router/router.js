@@ -94,7 +94,15 @@ const router = new Router({
       component: () => import('../components/RouterParam.vue'),
       props: true
     }
-  ]
+  ],
+  // 滚动行为
+  scrollBehavior(to, from, savedPosition) {
+    // return 期望滚动到哪个的位置
+    return {
+      x: 0,
+      y: 0
+    }
+  }
 })
 
 router.beforeEach((to, from, next) => {
