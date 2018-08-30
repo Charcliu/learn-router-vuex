@@ -93,6 +93,26 @@ const router = new Router({
       name: 'routerParam',
       component: () => import('../components/RouterParam.vue'),
       props: true
+    },
+    {
+      path: '/vuexA',
+      name: 'vuexA',
+      component: () => import('../components/vuex/vuexA.vue')
+    },
+    {
+      path: '/vuexB',
+      name: 'vuexB',
+      component: () => import('../components/vuex/vuexB.vue')
+    },
+    {
+      path: '/vuexC',
+      name: 'vuexC',
+      component: () => import('../components/vuex/vuexC.vue')
+    },
+    {
+      path: '/vuexD',
+      name: 'vuexD',
+      component: () => import('../components/vuex/vuexD.vue')
     }
   ],
   // 滚动行为
