@@ -6,7 +6,8 @@
       <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link :to="{ name: 'user', params: { id: 123 }}">User</router-link>
+      <router-link :to="{ name: 'user', params: { id: 123 }}">User</router-link> |
+      <router-link to="/vuexE">vuexE</router-link>
       <ul>
         <li @click="toUser">To User</li>
         <li @click="toNest">To Nest</li>

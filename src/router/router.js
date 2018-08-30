@@ -5,6 +5,7 @@ import About from '../views/About.vue'
 import HelloWorld from '../components/HelloWorld.vue'
 import User from '../components/User.vue'
 import Nest from '../components/Nest.vue'
+import store from '../vuex/store'
 
 Vue.use(Router)
 
@@ -28,7 +29,13 @@ const router = new Router({
       component: About,
       beforeEnter: (to, from, next) => {
         console.log('路由独享守卫', to, from, next)
-        next()
+        if (store.state.count === 1000 && store.state.name === 'MacBook') {
+          console.log('符合条件可以跳转')
+          next()
+        } else {
+          console.log('不满足条件不可以跳转')
+          next(false)
+        }
       },
       // 路由元信息,通过组件内route对象可以获取到
       meta: {
@@ -131,11 +138,16 @@ const router = new Router({
 })
 
 router.beforeEach((to, from, next) => {
+  // 获取Vuex状态
+  // console.log(router.app.$options.store.state)
+  // import 进来的东西调试的时候都是undefined 打印出来有值
+  console.log(store)
   console.log('全局守卫', to, from, next)
   next()
 })
 
 router.afterEach((to, from) => {
+  console.log(store)
   console.log('全局后置守卫', to, from)
 })
 

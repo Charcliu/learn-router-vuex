@@ -35,6 +35,14 @@ export default {
     // 可以访问组件实例 `this`
     console.log('路由内守卫beforeRouteLeave', to, from, next)
     next()
+    // const answer = window.confirm(
+    //   'Do you really want to leave? you have unsaved changes!'
+    // )
+    // if (answer) {
+    //   next()
+    // } else {
+    //   next(false)
+    // }
   }
 }
 </script>
