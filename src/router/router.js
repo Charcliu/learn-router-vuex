@@ -113,6 +113,11 @@ const router = new Router({
       path: '/vuexD',
       name: 'vuexD',
       component: () => import('../components/vuex/vuexD.vue')
+    },
+    {
+      path: '/vuexE',
+      name: 'vuexE',
+      component: () => import('../components/vuex/vuexE.vue')
     }
   ],
   // 滚动行为

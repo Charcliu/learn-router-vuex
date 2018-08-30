@@ -12,6 +12,10 @@ export const incrementWithObjStyle = (state, payload) => {
   state.count += payload.num
 }
 
+export const MODIFY_NAME = (state, payload) => {
+  state.name = payload.name
+}
+
 // 对象风格提交方式
 export const INCREMENT_ASYNC_TRUE = (state, payload) => {
   // 异步更新会造成状态不可追踪
